@@ -1,78 +1,108 @@
-import Image from "next/image";
-import { Geist, Geist_Mono } from "next/font/google";
+import Carousel from "@/components/Carousel";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
+const features = [
+  { title: "Automated scanning", body: "Run accessibility checks across your entire app in CI." },
+  { title: "Visual regression", body: "Catch contrast and focus issues before they ship." },
+  { title: "Component-level fixes", body: "Granular suggestions for your design system." },
+];
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
+const testimonials = [
+  { quote: "Evinced cut our backlog of issues in half.", author: "Jamie", role: "Head of Engineering, Acme" },
+  { quote: "We went from 200 violations to 12 in two weeks.", author: "Priya", role: "Frontend Lead, Globex" },
+  { quote: "Setup was effortless and our QA team loves it.", author: "Marcus", role: "VP Product, Initech" },
+];
+
+const logos = ["NorthCloud", "BlueRiver", "TerraDyne", "AltaPay", "Lumenly", "Quanta"];
 
 export default function Home() {
   return (
-    <div
-      className={`${geistSans.className} ${geistMono.className} flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black`}
-    >
-      <main className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the index.js file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
+    <main>
+      {/* HERO */}
+      <section className="hero bg-gradient-to-b from-indigo-50 to-white px-6 py-20">
+        <div className="mx-auto grid max-w-6xl items-center gap-12 md:grid-cols-2">
+          <div>
+            <h1 className="text-4xl font-semibold leading-tight text-zinc-900 md:text-5xl">
+              Ship an accessible web — without the audit overhead.
+            </h1>
+            <p className="mt-4 text-lg">
+              Evinced is the developer-first platform for finding and fixing accessibility
+              issues across your codebase, automatically.
+            </p>
+            <div className="mt-6 flex gap-3">
+              <a href="/products" className="rounded-md bg-indigo-500 px-5 py-3 text-sm text-white">
+                Try the demo
+              </a>
+              <a href="/contact" className="rounded-md border border-zinc-300 px-5 py-3 text-sm text-zinc-700">
+                Talk to sales
+              </a>
+            </div>
+          </div>
+          {/* a11y-100: redundant alt */}
+          <img
+            src="https://picsum.photos/seed/evinced-hero/640/400"
+            alt="Image of the Evinced dashboard"
+            className="rounded-lg shadow"
+          />
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
+      </section>
+
+      {/* LOGO WALL */}
+      <section className="logo-wall mx-auto max-w-6xl px-6 py-12">
+        <div className="mb-6 text-center text-sm uppercase tracking-wider">Trusted by 500+ teams</div>
+        <div className="grid grid-cols-2 items-center justify-items-center gap-6 md:grid-cols-6">
+          {logos.map((l, idx) => (
+            // a11y-102: client logo imgs without alt
+            <img
+              key={l}
+              src={`https://picsum.photos/seed/logo-${idx}/120/40`}
+              className="opacity-70 grayscale"
+              width={120}
+              height={40}
             />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs/pages/getting-started?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+          ))}
         </div>
-      </main>
-    </div>
+      </section>
+
+      {/* FEATURES — a11y-101: heading levels skip from h1 to h3 */}
+      <section className="features mx-auto max-w-6xl px-6 py-20">
+        <div className="mb-10 text-center">
+          <div className="text-xs uppercase tracking-wider text-indigo-500">Features</div>
+          <div className="mt-2 text-3xl font-semibold text-zinc-900">Built for engineering teams</div>
+        </div>
+        <div className="grid gap-8 md:grid-cols-3">
+          {features.map((f) => (
+            <div key={f.title} className="rounded-lg border border-zinc-200 p-6">
+              <h3 className="mb-2 text-lg font-semibold text-zinc-800">{f.title}</h3>
+              <p className="text-sm">{f.body}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* TESTIMONIALS */}
+      <section className="testimonials mx-auto max-w-6xl px-6 py-20">
+        <div className="mb-8 text-center text-3xl font-semibold text-zinc-900">
+          What our customers say
+        </div>
+        <Carousel slides={testimonials} />
+      </section>
+
+      {/* CTA */}
+      <section className="cta bg-indigo-500 px-6 py-16 text-center text-white">
+        <div className="text-3xl font-semibold">Ready to ship accessibly?</div>
+        <p className="mt-3 text-indigo-100">Start a free 14-day trial — no credit card required.</p>
+        {/* a11y-106: "Click here" link */}
+        <a href="/contact" className="mt-6 inline-block rounded bg-white px-6 py-3 text-sm font-semibold text-indigo-600">
+          Click here to learn more
+        </a>
+      </section>
+
+      {/* a11y-107: autoplay audio with no controls */}
+      <section className="music sr-only">
+        <audio autoPlay loop>
+          <source src="/silence.mp3" type="audio/mpeg" />
+        </audio>
+      </section>
+    </main>
   );
 }
