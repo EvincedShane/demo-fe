@@ -90,7 +90,7 @@ export default function Home() {
       {/* CTA */}
       <section className="cta bg-indigo-500 px-6 py-16 text-center text-white">
         <div className="text-3xl font-semibold">Ready to ship accessibly?</div>
-        <p className="mt-3 text-indigo-100">Start a free 14-day trial — no credit card required.</p>
+        <p className="mt-3 text-white">Start a free 14-day trial — no credit card required.</p>
         {/* a11y-106: "Click here" link */}
         <a href="/contact" className="mt-6 inline-block rounded bg-white px-6 py-3 text-sm font-semibold text-indigo-600">
           Click here to learn more
