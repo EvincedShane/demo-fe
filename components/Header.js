@@ -6,7 +6,7 @@ export default function Header() {
       <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
         {/* a11y-010: logo img has no alt */}
         <Link href="/" className="flex items-center gap-2">
-          <img className="logo h-8 w-8" src="/globe.svg" />
+          <img className="logo h-8 w-8" src="/globe.svg" alt="Evinced logo" />
           <span className="text-lg font-semibold text-zinc-800">evinced</span>
         </Link>
 
