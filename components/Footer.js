@@ -75,6 +75,7 @@ export default function Footer() {
           <span
             onClick={() => setLangOpen(!langOpen)}
             className="cursor-pointer rounded border border-zinc-300 px-2 py-1"
+            role="button"
           >
             {lang} ▾
           </span>
