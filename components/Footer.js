@@ -69,7 +69,7 @@ export default function Footer() {
       </div>
 
       <div className="mx-auto mt-10 flex max-w-6xl flex-col items-start gap-3 px-6 text-xs md:flex-row md:items-center md:justify-between">
-        <div>© 2026 Evinced demo. All wrongs reserved.</div>
+        <div className="text-zinc-700">© 2026 Evinced demo. All wrongs reserved.</div>
         {/* a11y-023: language switcher doesn't change document lang */}
         <div className="lang-switcher relative">
           <span

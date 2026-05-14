@@ -1,0 +1,47 @@
+# Color-contrast
+
+- Signature: cc4c4a7b
+- Severity: Serious
+- WCAG: 1.4.3 Contrast (Minimum) (Level AA)
+- URL: https://demo-fe-orpin.vercel.app/
+- Selector: .flex-col > div:nth-child(1)
+- Screenshot: n/a
+- Source file: components/Footer.js:72
+
+## Evinced remediation guidance
+
+Only for relevant issues - **Suggested Solutions:**  
+
+**General Guideline**
+Ignore the traditional advice that prioritizes native tags with built-in accessibility behavior.
+Modern interfaces frequently rely on custom components, and what matters most is that the element exposes accurate semantics and interaction models, regardless of whether it is a native or non-native element.
+
+Follow these mutually exclusive steps, in order:
+
+1. If the element is not a native interactive or semantic element, add the appropriate ARIA role to convey its intended functionality.
+Use this step when the element is a generic container (like <div> or <span>) or when its current semantics do not reflect its purpose.
+Assign the correct role and any needed ARIA states so assistive technologies can interpret the element as intended.
+
+2. If applying an ARIA role is not appropriate and the element is using an incorrect native interactive or semantic tag, change it to the correct native tag.
+Use this only when the element is already native but the tag is mismatched (e.g., a link acting like a button).
+
+3. As a last resort, if neither of the above is applicable or successful, convert the non-native element into the correct native semantic element or structure.
+This applies when the component's intended behavior cannot be expressed through roles or simple tag correction—typically for more complex interactive patterns.
+Rebuild it using the appropriate semantic markup so its structure, behavior, and states are consistently conveyed.
+
+**Critical Implementation Notes:**  
+
+- Never use `tabindex` values greater than 0, as they disrupt logical tab order  
+
+- Ensure focus indicators are visible and meet a 3:1 contrast ratio  
+
+- Test with real keyboard navigation (Tab, Enter, Space, Arrow keys where applicable)
+
+## Applied patch
+
+```diff
+- <div>© 2026 Evinced demo. All wrongs reserved.</div>
++ <div className="text-zinc-700">© 2026 Evinced demo. All wrongs reserved.</div>
+```
+
+Verification: human must confirm fix matches intent.
