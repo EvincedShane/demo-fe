@@ -73,7 +73,7 @@ export default function Home() {
           {features.map((f) => (
             <div key={f.title} className="rounded-lg border border-zinc-200 p-6">
               <h3 className="mb-2 text-lg font-semibold text-zinc-800">{f.title}</h3>
-              <p className="text-sm">{f.body}</p>
+              <p className="text-sm text-zinc-700">{f.body}</p>
             </div>
           ))}
         </div>
