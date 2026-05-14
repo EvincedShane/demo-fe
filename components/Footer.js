@@ -49,7 +49,7 @@ export default function Footer() {
           <div className="mb-2 font-semibold text-zinc-700">Follow</div>
           {/* a11y-022: icon-only buttons, no aria-label */}
           <div className="social-icons flex gap-2">
-            <button className="rounded p-1">
+            <button className="rounded p-1" aria-label="Follow us on Twitter">
               <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
                 <path d="M22 5.8a8.5 8.5 0 0 1-2.4.7 4.2 4.2 0 0 0 1.8-2.3 8.3 8.3 0 0 1-2.6 1 4.1 4.1 0 0 0-7 3.7A11.7 11.7 0 0 1 3 4.7a4.1 4.1 0 0 0 1.3 5.5 4.1 4.1 0 0 1-1.9-.5v.1a4.1 4.1 0 0 0 3.3 4 4.1 4.1 0 0 1-1.9.1 4.1 4.1 0 0 0 3.9 2.9A8.3 8.3 0 0 1 2 18.4a11.7 11.7 0 0 0 6.3 1.9c7.5 0 11.7-6.2 11.7-11.7v-.5A8.4 8.4 0 0 0 22 5.8z" />
               </svg>
