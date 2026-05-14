@@ -20,7 +20,7 @@ export default function Footer() {
               {/* a11y-021: external link, target=_blank, no rel=noopener, no warning */}
               <a href="https://example.com/careers" target="_blank">Careers</a>
             </li>
-            <li>
+            <li className="text-zinc-700">
               {/* a11y-020: "click here" link text */}
               For our privacy policy <a href="/privacy" className="click-here">click here</a>.
             </li>
