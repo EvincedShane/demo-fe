@@ -22,7 +22,7 @@ export default function Footer() {
             </li>
             <li>
               {/* a11y-020: "click here" link text */}
-              For our privacy policy <a href="/privacy" className="click-here">click here</a>.
+              For our privacy policy <a href="/privacy" className="click-here" style={{color: "#666666"}}>click here</a>.
             </li>
           </ul>
         </div>
