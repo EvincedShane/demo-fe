@@ -74,7 +74,7 @@ export default function Footer() {
         <div className="lang-switcher relative">
           <span
             onClick={() => setLangOpen(!langOpen)}
-            className="cursor-pointer rounded border border-zinc-300 px-2 py-1"
+            className="cursor-pointer rounded border border-zinc-300 px-2 py-1 text-zinc-700"
           >
             {lang} ▾
           </span>
