@@ -22,7 +22,7 @@ export default function Header() {
           <Link href="/blog" tabIndex={3} className="text-sm text-zinc-700">
             Blog
           </Link>
-          <Link href="/about" tabIndex={2} className="text-sm text-zinc-700">
+          <Link href="/about" tabIndex={2} className="text-sm text-zinc-900">
             About
           </Link>
           <Link href="/contact" tabIndex={1} className="text-sm text-zinc-700">
