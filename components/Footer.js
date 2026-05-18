@@ -14,7 +14,7 @@ export default function Footer() {
 
         <div>
           <div className="mb-2 font-semibold text-zinc-700">Company</div>
-          <ul className="space-y-1 text-sm">
+          <ul className="space-y-1 text-sm text-zinc-700">
             <li><a href="/about">About</a></li>
             <li>
               {/* a11y-021: external link, target=_blank, no rel=noopener, no warning */}
