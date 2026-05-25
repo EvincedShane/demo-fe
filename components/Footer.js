@@ -31,7 +31,9 @@ export default function Footer() {
           <div className="mb-2 font-semibold text-zinc-700">Subscribe</div>
           {/* a11y-024: placeholder-as-label */}
           <form onSubmit={(e) => e.preventDefault()} className="flex gap-2">
+            <label htmlFor="email-subscribe" className="sr-only">Email address</label>
             <input
+              id="email-subscribe"
               type="email"
               placeholder="your@email.com"
               className="flex-1 rounded border border-zinc-300 px-3 py-2 text-sm text-zinc-700"
