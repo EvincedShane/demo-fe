@@ -11,7 +11,7 @@ export default function Header() {
         </Link>
 
         {/* a11y-012: nav is a <div>, not <nav> */}
-        <div role="navigation-wrapper" className="hidden items-center gap-6 md:flex">
+        <div role="navigation" className="hidden items-center gap-6 md:flex">
           {/* a11y-011: positive tabindex values disrupt order */}
           <Link href="/" tabIndex={5} className="text-sm text-zinc-700">
             Home
