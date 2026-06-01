@@ -58,6 +58,7 @@ export default function Home() {
               className="opacity-70 grayscale"
               width={120}
               height={40}
+              alt={`${l} logo`}
             />
           ))}
         </div>
