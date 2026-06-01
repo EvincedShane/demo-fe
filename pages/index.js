@@ -55,6 +55,7 @@ export default function Home() {
             <img
               key={l}
               src={`https://picsum.photos/seed/logo-${idx}/120/40`}
+              alt={`${l} logo`}
               className="opacity-70 grayscale"
               width={120}
               height={40}
