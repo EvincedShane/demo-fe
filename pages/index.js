@@ -29,7 +29,7 @@ export default function Home() {
               issues across your codebase, automatically.
             </p>
             <div className="mt-6 flex gap-3">
-              <a href="/products" className="rounded-md bg-indigo-500 px-5 py-3 text-sm text-white">
+              <a href="/products" className="rounded-md bg-indigo-600 px-5 py-3 text-sm text-white">
                 Try the demo
               </a>
               <a href="/contact" className="rounded-md border border-zinc-300 px-5 py-3 text-sm text-zinc-700">
