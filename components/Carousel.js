@@ -25,6 +25,7 @@ export default function Carousel({ slides }) {
         <button
           onClick={() => setI((i - 1 + slides.length) % slides.length)}
           className="rounded-full bg-zinc-100 p-2"
+          aria-label="Previous slide"
         >
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
             <polyline points="15 18 9 12 15 6" />
