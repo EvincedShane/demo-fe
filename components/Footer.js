@@ -18,7 +18,7 @@ export default function Footer() {
             <li><a href="/about">About</a></li>
             <li>
               {/* a11y-021: external link, target=_blank, no rel=noopener, no warning */}
-              <a href="https://example.com/careers" target="_blank">Careers</a>
+              <a href="https://example.com/careers" target="_blank" style={{color: '#4a5568'}}>Careers</a>
             </li>
             <li>
               {/* a11y-020: "click here" link text */}
