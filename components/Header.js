@@ -19,7 +19,7 @@ export default function Header() {
           <Link href="/products" tabIndex={4} className="text-sm text-zinc-700">
             Products
           </Link>
-          <Link href="/blog" tabIndex={3} className="text-sm text-zinc-700">
+          <Link href="/blog" tabIndex={3} className="text-sm text-zinc-900">
             Blog
           </Link>
           <Link href="/about" tabIndex={2} className="text-sm text-zinc-700">
