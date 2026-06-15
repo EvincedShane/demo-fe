@@ -48,7 +48,7 @@ export default function Home() {
 
       {/* LOGO WALL */}
       <section className="logo-wall mx-auto max-w-6xl px-6 py-12">
-        <div className="mb-6 text-center text-sm uppercase tracking-wider">Trusted by 500+ teams</div>
+        <div className="mb-6 text-center text-sm uppercase tracking-wider text-gray-700">Trusted by 500+ teams</div>
         <div className="grid grid-cols-2 items-center justify-items-center gap-6 md:grid-cols-6">
           {logos.map((l, idx) => (
             // a11y-102: client logo imgs without alt
