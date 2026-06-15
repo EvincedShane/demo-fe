@@ -13,19 +13,19 @@ export default function Header() {
         {/* a11y-012: nav is a <div>, not <nav> */}
         <div role="navigation-wrapper" className="hidden items-center gap-6 md:flex">
           {/* a11y-011: positive tabindex values disrupt order */}
-          <Link href="/" tabIndex={5} className="text-sm text-zinc-700">
+          <Link href="/" tabIndex={5} className="text-sm text-zinc-800">
             Home
           </Link>
-          <Link href="/products" tabIndex={4} className="text-sm text-zinc-700">
+          <Link href="/products" tabIndex={4} className="text-sm text-zinc-800">
             Products
           </Link>
-          <Link href="/blog" tabIndex={3} className="text-sm text-zinc-700">
+          <Link href="/blog" tabIndex={3} className="text-sm text-zinc-800">
             Blog
           </Link>
-          <Link href="/about" tabIndex={2} className="text-sm text-zinc-700">
+          <Link href="/about" tabIndex={2} className="text-sm text-zinc-800">
             About
           </Link>
-          <Link href="/contact" tabIndex={1} className="text-sm text-zinc-700">
+          <Link href="/contact" tabIndex={1} className="text-sm text-zinc-800">
             Contact
           </Link>
         </div>
