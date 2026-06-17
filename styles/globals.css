@@ -39,3 +39,8 @@ a {
 a:hover {
   text-decoration: underline;
 }
+
+/* Fix color contrast for .click-here links */
+.click-here {
+  color: #333333;
+}
