@@ -9,7 +9,7 @@ export default function Footer() {
       <div className="mx-auto grid max-w-6xl grid-cols-1 gap-8 px-6 md:grid-cols-4">
         <div>
           <div className="mb-2 text-lg font-semibold text-zinc-800">evinced</div>
-          <p className="text-sm">Automated accessibility testing for the modern web.</p>
+          <p className="text-sm text-zinc-700">Automated accessibility testing for the modern web.</p>
         </div>
 
         <div>
