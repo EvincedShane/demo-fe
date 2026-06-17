@@ -72,12 +72,12 @@ export default function Footer() {
         <div>© 2026 Evinced demo. All wrongs reserved.</div>
         {/* a11y-023: language switcher doesn't change document lang */}
         <div className="lang-switcher relative">
-          <span
+          <button
             onClick={() => setLangOpen(!langOpen)}
             className="cursor-pointer rounded border border-zinc-300 px-2 py-1"
           >
             {lang} ▾
-          </span>
+          </button>
           {langOpen && (
             <div className="absolute right-0 top-full mt-1 rounded border border-zinc-200 bg-white">
               {["English", "Español", "日本語", "Deutsch"].map((l) => (
