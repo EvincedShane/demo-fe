@@ -15,7 +15,7 @@ export default function Footer() {
         <div>
           <div className="mb-2 font-semibold text-zinc-700">Company</div>
           <ul className="space-y-1 text-sm">
-            <li><a href="/about">About</a></li>
+            <li><a href="/about" className="text-zinc-700">About</a></li>
             <li>
               {/* a11y-021: external link, target=_blank, no rel=noopener, no warning */}
               <a href="https://example.com/careers" target="_blank">Careers</a>
