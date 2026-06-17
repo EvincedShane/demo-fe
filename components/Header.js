@@ -25,7 +25,7 @@ export default function Header() {
           <Link href="/about" tabIndex={2} className="text-sm text-zinc-700">
             About
           </Link>
-          <Link href="/contact" tabIndex={1} className="text-sm text-zinc-700">
+          <Link href="/contact" tabIndex={1} className="text-sm text-zinc-900">
             Contact
           </Link>
         </div>
